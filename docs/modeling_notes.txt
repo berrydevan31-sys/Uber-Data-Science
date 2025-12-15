@@ -1,0 +1,21 @@
+
+Visual inspection in Tableau:
+bgc date - signup date: conversion percentage correlates negatively with difference between fields
+vehicle added date - signup date: conversion percentage correlates negatively with difference between fields
+vehicle make, model, year: do not appear to make a difference in conversion percentage
+vehicle year: More vehicles are 5+ years old than expected
+
+Data cleaning / enrichming
+vehicle year: contains 0's. replacing w/ NAN
+signup_to_bgc: some bgc seem to occur before signup. Setting min value of 0
+signup_to_vehicle_add: some vehicle_add seem to occur before signup. Setting min value of 0
+
+Modeling:
+No multicollinearity issues apparent
+No heteroskedasticity issues apparent
+background check is indistinguishable from noise
+vehicle make is indistinguishable from noise
+vehicle year statistically significant, recentering around 2000
+
+vehicle inspect and vehicle year both statistically significant. Possible multicollinearity? Is year gathered at
+inspection?
